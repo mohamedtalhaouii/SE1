@@ -1,10 +1,14 @@
-#1
+#Q1
 lsb_release -a
-#2
+
+#Q2
 logname ; hostname
-#3
+
+#Q3
 who
-#4
+
+#Q4
 id
-#5
+
+#Q5
 passwd #Entrer le neuveau mot de passe
