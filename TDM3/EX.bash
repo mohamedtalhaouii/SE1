@@ -26,7 +26,7 @@ rm mois.txt
 cat lien_mois # le fichier n'existe pas
 
 #Q7
-find rep -name "*.txt"
+find ./ -name "*.txt"
 
 #Q8
 grep -c "me" lien_jours

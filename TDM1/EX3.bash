@@ -1,7 +1,7 @@
 #Q1 :
 mkdir test; cd test
 mkdir -p rep2/rep3 rep1/rep4
-touch iptic6 touch isfic6 isrep4
+touch iptic6 isfic6 isrep4
 
 #Q2 :
 cd rep1
