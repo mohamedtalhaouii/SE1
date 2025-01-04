@@ -9,7 +9,8 @@ pgcd(){
     fi
 }
 ppcm(){
-    echo $(( ($1 * $2) / $(pgcd $1 $2) ))
+    echo `expr \( $1 \* $2 \) / $(pgcd $1 $2)`
 }
 
 read -p "Veuillez Saisir deux Entiers Positives : " a b
+ppcm $a $b
