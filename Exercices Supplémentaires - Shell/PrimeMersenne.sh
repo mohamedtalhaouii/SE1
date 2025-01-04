@@ -2,9 +2,9 @@
 #Mohamed Talhaoui
 prime() {
     P=0
-    for (( i=1; i <= $1; i++ )); do
-        if [ $(( $1 % $i )) -eq 0 ]; then
-            P=$((P + 1))
+    for i in `seq 1 $1`; do
+        if [ `expr $1 % $i` -eq 0 ]; then
+            P=`expr $P + 1`
         fi
     done
 
@@ -16,7 +16,7 @@ prime() {
 }
 
 primeMersenne() {
-    for (( i=1; i < $1; i++ )); do
+    for i in `seq 1 $1`; do
         if [ $(prime $i) -eq 1 ]; then
             if [ $(( 2**$i - 1 )) -eq $1 ]; then # 2ⁿ - 1 == q | n : le nombre premier, q : le nombre va saisi par utilisateur
                 echo "$1 est un Premier de Mersenne"
@@ -29,7 +29,7 @@ primeMersenne() {
 
 read -p "Entrer un nombre impair : " q
 
-if (( q % 2 == 0 )); then
+if [ `expr $q % 2` -eq 0 ]; then
     echo "Veuillez entrer un nombre impair !"
 else
     primeMersenne $q
